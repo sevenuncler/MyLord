@@ -11,7 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let producerConfig = ProducerConfig()
+        let producer = Producer<String, String>(config: producerConfig)
+        let record = ProducerRecord(key: "Key", value: "value")
+        producer.send(record)
     }
 
 

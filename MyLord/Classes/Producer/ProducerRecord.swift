@@ -9,13 +9,9 @@ import Foundation
 
 class ProducerRecord<K, V>: Record<Any, Any> {
     let topic: String
-    let key: K
-    let value: V
-    var timestamp: Float?
     
     init(topic: String, key: K, value: V) {
         self.topic = topic
-        self.key = key
-        self.value = value
+        super.init(key: key, value: value)
     }
 }

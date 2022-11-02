@@ -9,7 +9,11 @@ import Foundation
 
 class Record<K, V> {
     let key: K
-    init(key: K) {
+    let value: V
+    var timestamp: Float?
+
+    init(key: K, value: V) {
         self.key = key
+        self.value = value
     }
 }

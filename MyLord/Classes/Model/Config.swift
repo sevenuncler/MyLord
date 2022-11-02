@@ -9,8 +9,8 @@ import Foundation
 
 class Config {
     let topic: String
-    let queue: String
-    init(topic: String, queue: String) {
+    var queue: String?
+    init(topic: String, queue: String?) {
         self.topic = topic
         self.queue = queue
     }

@@ -17,8 +17,10 @@ class ViewController: UIViewController {
         
         let record = ProducerRecord(topic: "iap", key: "Key", value: "value")
         producer.send(record)
+        
+        let inAppPushConsumer = InAppPushConsumer()
+        guard let iapRecord = inAppPushConsumer.next() else { return }
+        inAppPushConsumer.commit(iapRecord)
     }
-
-
 }
 

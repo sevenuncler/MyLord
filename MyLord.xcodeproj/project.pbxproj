@@ -22,6 +22,7 @@
 		2B8387EB290980A900B88A53 /* Producer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387EA290980A900B88A53 /* Producer.swift */; };
 		2B8387F0290981C400B88A53 /* ProducerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387EF290981C400B88A53 /* ProducerConfig.swift */; };
 		2B8387F22909829600B88A53 /* ProducerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387F12909829600B88A53 /* ProducerRecord.swift */; };
+		2BD9AE732912BFAA008F9B0D /* InAppPushConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2B8387EA290980A900B88A53 /* Producer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producer.swift; sourceTree = "<group>"; };
 		2B8387EF290981C400B88A53 /* ProducerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerConfig.swift; sourceTree = "<group>"; };
 		2B8387F12909829600B88A53 /* ProducerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerRecord.swift; sourceTree = "<group>"; };
+		2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPushConsumer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2B7CCD9B2912BEB600590A23 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		2B7CCD9C2912BEC300590A23 /* TaskQueue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TaskQueue;
+			sourceTree = "<group>";
+		};
 		2B8387C92909801200B88A53 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +100,8 @@
 		2B8387D42909801200B88A53 /* MyLord */ = {
 			isa = PBXGroup;
 			children = (
+				2B7CCD9C2912BEC300590A23 /* TaskQueue */,
+				2B7CCD9B2912BEB600590A23 /* IAP */,
 				2B8387E92909808200B88A53 /* Classes */,
 				2B8387D52909801200B88A53 /* AppDelegate.swift */,
 				2B8387D72909801200B88A53 /* SceneDelegate.swift */,
@@ -214,6 +233,7 @@
 				2B8387F22909829600B88A53 /* ProducerRecord.swift in Sources */,
 				2B8387EB290980A900B88A53 /* Producer.swift in Sources */,
 				2B6710962910A84B00043586 /* Consumer.swift in Sources */,
+				2BD9AE732912BFAA008F9B0D /* InAppPushConsumer.swift in Sources */,
 				2B8387D62909801200B88A53 /* AppDelegate.swift in Sources */,
 				2B6710982910A8EA00043586 /* Queue.swift in Sources */,
 				2B8387D82909801200B88A53 /* SceneDelegate.swift in Sources */,

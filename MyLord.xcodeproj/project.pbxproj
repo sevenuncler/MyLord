@@ -22,6 +22,8 @@
 		2B8387EB290980A900B88A53 /* Producer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387EA290980A900B88A53 /* Producer.swift */; };
 		2B8387F0290981C400B88A53 /* ProducerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387EF290981C400B88A53 /* ProducerConfig.swift */; };
 		2B8387F22909829600B88A53 /* ProducerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387F12909829600B88A53 /* ProducerRecord.swift */; };
+		2BC37E642914A34D00511F40 /* InAppPushConsumerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC37E632914A34D00511F40 /* InAppPushConsumerGroup.swift */; };
+		2BC37E662914A37900511F40 /* InAppPushTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC37E652914A37900511F40 /* InAppPushTask.swift */; };
 		2BD9AE732912BFAA008F9B0D /* InAppPushConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		2B8387EA290980A900B88A53 /* Producer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producer.swift; sourceTree = "<group>"; };
 		2B8387EF290981C400B88A53 /* ProducerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerConfig.swift; sourceTree = "<group>"; };
 		2B8387F12909829600B88A53 /* ProducerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerRecord.swift; sourceTree = "<group>"; };
+		2BC37E632914A34D00511F40 /* InAppPushConsumerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPushConsumerGroup.swift; sourceTree = "<group>"; };
+		2BC37E652914A37900511F40 /* InAppPushTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPushTask.swift; sourceTree = "<group>"; };
 		2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPushConsumer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */,
+				2BC37E632914A34D00511F40 /* InAppPushConsumerGroup.swift */,
+				2BC37E652914A37900511F40 /* InAppPushTask.swift */,
 			);
 			path = IAP;
 			sourceTree = "<group>";
@@ -232,7 +238,9 @@
 				2B67109D2910AFA200043586 /* Config.swift in Sources */,
 				2B8387F22909829600B88A53 /* ProducerRecord.swift in Sources */,
 				2B8387EB290980A900B88A53 /* Producer.swift in Sources */,
+				2BC37E642914A34D00511F40 /* InAppPushConsumerGroup.swift in Sources */,
 				2B6710962910A84B00043586 /* Consumer.swift in Sources */,
+				2BC37E662914A37900511F40 /* InAppPushTask.swift in Sources */,
 				2BD9AE732912BFAA008F9B0D /* InAppPushConsumer.swift in Sources */,
 				2B8387D62909801200B88A53 /* AppDelegate.swift in Sources */,
 				2B6710982910A8EA00043586 /* Queue.swift in Sources */,

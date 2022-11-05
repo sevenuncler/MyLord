@@ -15,5 +15,15 @@ import Foundation
 // 4. 消息冲突的解决，利用手势冲突的策略
 
 class InAppPushConsumer: Consumer {
+    func consume(task: InAppPushTask) {
+        task.excute()
+    }
     
+    func shouldHandle(with task: InAppPushTask) -> Bool {
+        return true
+    }
+    
+    func shouldExcuteSimultaneously(with task: InAppPushTask) -> Bool {
+        return true
+    }
 }

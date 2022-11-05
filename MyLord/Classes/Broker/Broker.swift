@@ -14,8 +14,18 @@ protocol BrokerProtocol {
 
 class Broker: BrokerProtocol {
     var topics: [String: TopicProtocol] = [:]
+    static let sharedInstance = Broker()
+    
+    func registerTopic(_ topic: Topic) {
+        topics[topic.key] = topic
+    }
+    
     func topic(by config: Config) -> TopicProtocol? {
         return topics[config.topic]
+    }
+    
+    func topic(key: String) -> TopicProtocol? {
+        return topics[key]
     }
     
     func createTopicIfEmpty(by config: Config) -> TopicProtocol {

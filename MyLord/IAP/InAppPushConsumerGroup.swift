@@ -41,12 +41,12 @@ class InAppPushConsumerGroup {
     func consume() {
         // 1. 指定获取策略
         // 2. 遍历候选
-        Broker.sharedInstance.topic(key: "InnerPush")?.pollRecord({ record in
+        Broker.broker(by: nil)?.topic(key: "InnerPush")?.pollRecord({ record in
             // 3. 拦截器转换消息记录为 task
             let task = interceptor.onConsume(record: record)
             // 4. 单任务判断
             let key: String = record.key as! String
-            var targetConsumer: InAppPushConsumer? = consumers[key]
+            let targetConsumer: InAppPushConsumer? = consumers[key]
             if task != nil && targetConsumer != nil && targetConsumer!.shouldExcuteSimultaneously(with: task!) {
                 if currentTask == nil || ((currentConsumer?.shouldExcuteSimultaneously(with: task!)) != nil) {
                     let consumer = consumers[task!.record.key]

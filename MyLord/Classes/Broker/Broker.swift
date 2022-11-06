@@ -15,6 +15,14 @@ protocol BrokerProtocol {
 class Broker: BrokerProtocol {
     var topics: [String: TopicProtocol] = [:]
     static let sharedInstance = Broker()
+    static let brokers: [String: Broker] = [:]
+    static func broker(by name: String?) -> Broker? {
+        if name == nil {
+            return sharedInstance;
+        }
+        
+        return brokers[name!]
+    }
     
     func registerTopic(_ topic: Topic) {
         topics[topic.key] = topic

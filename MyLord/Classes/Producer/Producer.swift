@@ -16,9 +16,10 @@ class Producer<K, V> {
         self.config = config
     }
     
-    func send(_ record: ProducerRecord<K, V>) {
+    func send(_ record: ProducerRecord<K, V>) -> Bool{
         let topic = broker.createTopicIfEmpty(by: config)
-        topic.queue(by: record.key as! String, create: config.autoCreateQueue)?.enqueue(record: record)
+        let result = topic.queue(by: record.key as! String, create: config.autoCreateQueue)?.enqueue(record: record)
+        return result ?? false
     }
     
     func updateBroker(broker: BrokerProtocol) {

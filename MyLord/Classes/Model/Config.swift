@@ -8,6 +8,7 @@
 import Foundation
 
 class Config {
+    var broker: String? = nil
     let topic: String
     var queue: String?
     init(topic: String, queue: String?) {

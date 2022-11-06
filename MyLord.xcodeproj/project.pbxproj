@@ -29,6 +29,11 @@
 		2BC4D1A729155EFF00252FD1 /* InnerPushCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1A629155EFF00252FD1 /* InnerPushCenter.swift */; };
 		2BC4D1A92915637A00252FD1 /* InnerPushProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1A82915637A00252FD1 /* InnerPushProducer.swift */; };
 		2BC4D1AB291564B700252FD1 /* InnerPushRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1AA291564B700252FD1 /* InnerPushRecord.swift */; };
+		2BC4D1AD291655B800252FD1 /* InnerPushDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1AC291655B800252FD1 /* InnerPushDefines.swift */; };
+		2BC4D1AF291693B500252FD1 /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1AE291693B500252FD1 /* ToastCenter.swift */; };
+		2BC4D1B1291694BF00252FD1 /* ToastTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1B0291694BF00252FD1 /* ToastTask.swift */; };
+		2BC4D1B32917626F00252FD1 /* ConsumerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1B22917626F00252FD1 /* ConsumerConfig.swift */; };
+		2BC4D1B5291764DD00252FD1 /* ConsumerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D1B4291764DD00252FD1 /* ConsumerGroup.swift */; };
 		2BD9AE732912BFAA008F9B0D /* InAppPushConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +62,11 @@
 		2BC4D1A629155EFF00252FD1 /* InnerPushCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerPushCenter.swift; sourceTree = "<group>"; };
 		2BC4D1A82915637A00252FD1 /* InnerPushProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerPushProducer.swift; sourceTree = "<group>"; };
 		2BC4D1AA291564B700252FD1 /* InnerPushRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerPushRecord.swift; sourceTree = "<group>"; };
+		2BC4D1AC291655B800252FD1 /* InnerPushDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerPushDefines.swift; sourceTree = "<group>"; };
+		2BC4D1AE291693B500252FD1 /* ToastCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastCenter.swift; sourceTree = "<group>"; };
+		2BC4D1B0291694BF00252FD1 /* ToastTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastTask.swift; sourceTree = "<group>"; };
+		2BC4D1B22917626F00252FD1 /* ConsumerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerConfig.swift; sourceTree = "<group>"; };
+		2BC4D1B4291764DD00252FD1 /* ConsumerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerGroup.swift; sourceTree = "<group>"; };
 		2BD9AE722912BFAA008F9B0D /* InAppPushConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPushConsumer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +101,7 @@
 				2BC4D1A629155EFF00252FD1 /* InnerPushCenter.swift */,
 				2BC4D1A82915637A00252FD1 /* InnerPushProducer.swift */,
 				2BC4D1AA291564B700252FD1 /* InnerPushRecord.swift */,
+				2BC4D1AC291655B800252FD1 /* InnerPushDefines.swift */,
 			);
 			path = IAP;
 			sourceTree = "<group>";
@@ -98,6 +109,8 @@
 		2B7CCD9C2912BEC300590A23 /* TaskQueue */ = {
 			isa = PBXGroup;
 			children = (
+				2BC4D1AE291693B500252FD1 /* ToastCenter.swift */,
+				2BC4D1B0291694BF00252FD1 /* ToastTask.swift */,
 			);
 			path = TaskQueue;
 			sourceTree = "<group>";
@@ -161,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				2B6710952910A84B00043586 /* Consumer.swift */,
+				2BC4D1B22917626F00252FD1 /* ConsumerConfig.swift */,
+				2BC4D1B4291764DD00252FD1 /* ConsumerGroup.swift */,
 			);
 			path = Consumer;
 			sourceTree = "<group>";
@@ -254,16 +269,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B6710942910A7C500043586 /* Broker.swift in Sources */,
+				2BC4D1B5291764DD00252FD1 /* ConsumerGroup.swift in Sources */,
+				2BC4D1B32917626F00252FD1 /* ConsumerConfig.swift in Sources */,
 				2BC4D1A729155EFF00252FD1 /* InnerPushCenter.swift in Sources */,
 				2B67109A2910A92700043586 /* Topic.swift in Sources */,
 				2BC4D1AB291564B700252FD1 /* InnerPushRecord.swift in Sources */,
+				2BC4D1AF291693B500252FD1 /* ToastCenter.swift in Sources */,
 				2B67109F2910B21600043586 /* Record.swift in Sources */,
+				2BC4D1AD291655B800252FD1 /* InnerPushDefines.swift in Sources */,
 				2B8387F0290981C400B88A53 /* ProducerConfig.swift in Sources */,
 				2B8387DA2909801200B88A53 /* ViewController.swift in Sources */,
 				2B67109D2910AFA200043586 /* Config.swift in Sources */,
 				2B8387F22909829600B88A53 /* ProducerRecord.swift in Sources */,
 				2B8387EB290980A900B88A53 /* Producer.swift in Sources */,
 				2BC37E642914A34D00511F40 /* InAppPushConsumerGroup.swift in Sources */,
+				2BC4D1B1291694BF00252FD1 /* ToastTask.swift in Sources */,
 				2B6710962910A84B00043586 /* Consumer.swift in Sources */,
 				2BC4D1A2291558BD00252FD1 /* LiveInAppPushConsumer.swift in Sources */,
 				2BC37E662914A37900511F40 /* InAppPushTask.swift in Sources */,

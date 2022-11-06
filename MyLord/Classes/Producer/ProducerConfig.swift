@@ -7,5 +7,5 @@
 
 import Foundation
 class ProducerConfig: Config {
-    
+    var autoCreateQueue = false
 }

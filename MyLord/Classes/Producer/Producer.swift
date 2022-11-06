@@ -10,6 +10,7 @@ import Foundation
 class Producer<K, V> {
     let config: ProducerConfig
     var broker: BrokerProtocol
+    
     init(broker: BrokerProtocol, config: ProducerConfig) {
         self.broker = broker
         self.config = config
@@ -17,7 +18,7 @@ class Producer<K, V> {
     
     func send(_ record: ProducerRecord<K, V>) {
         let topic = broker.createTopicIfEmpty(by: config)
-        topic.queue(by: record.key as! String, create: true).enqueue(record: record)
+        topic.queue(by: record.key as! String, create: config.autoCreateQueue).enqueue(record: record)
     }
     
     func updateBroker(broker: BrokerProtocol) {

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol QueueProtocol {
-    func enqueue(record: Record<Any, Any>)
+    func enqueue(record: Record<Any, Any>) -> Bool
     func dequeue() -> Record<Any, Any>?
     func delete(record: Record<Any, Any>) -> Bool
     func clear()
@@ -17,16 +17,18 @@ protocol QueueProtocol {
 class Queue: QueueProtocol {
     var records: [Record<Any, Any>] = []
     
-    func enqueue(record: Record<Any, Any>) {
-        records.append(record)
+    func enqueue(record: Record<Any, Any>) -> Bool {
+        records.insert(record, at: 0)
+        return true
     }
     
     func dequeue() -> Record<Any, Any>? {
-        return Record(key: "k", value: "v")
+        let record = records.popLast()
+        return record
     }
     
     func delete(record: Record<Any, Any>) -> Bool {
-        return true
+        return false
     }
     
     func clear() {

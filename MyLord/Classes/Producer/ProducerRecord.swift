@@ -8,10 +8,7 @@
 import Foundation
 
 class ProducerRecord<K, V>: Record<Any, Any> {
-    let topic: String
-    
-    init(topic: String, key: K, value: V) {
-        self.topic = topic
+    init(key: K, value: V) {
         super.init(key: key, value: value)
     }
 }

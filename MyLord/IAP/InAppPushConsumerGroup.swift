@@ -33,6 +33,11 @@ class InAppPushConsumerGroup {
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
     }
     
+    func stopLoop() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
     func consume() {
         // 1. 指定获取策略
         // 2. 遍历候选

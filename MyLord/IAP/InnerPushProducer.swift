@@ -7,6 +7,6 @@
 
 import Foundation
 
-class InnerPushProducer: Producer<Any, Any> {
+class InnerPushProducer: Producer<String, Any> {
     
 }

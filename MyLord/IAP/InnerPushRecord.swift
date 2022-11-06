@@ -8,6 +8,6 @@
 import Foundation
 
 // Producer-Topic、Key-Queue、Consumer
-class InnerPushRecord: Record<Any, Any> {
+class InnerPushRecord: ProducerRecord<String, Any> {
     
 }

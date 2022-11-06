@@ -19,7 +19,7 @@ class InnerPushCenter {
     
     static let defaultCenter = InnerPushCenter()
     lazy var topic: Topic = {
-        return Topic(key: "InnerPush")
+        return Topic(key: InnerPushTopic)
     }()
     
     lazy var consumerGroup: InAppPushConsumerGroup = {

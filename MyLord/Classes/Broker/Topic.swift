@@ -9,7 +9,7 @@ import Foundation
 
 protocol TopicProtocol {
     func queue(by key: String ) -> QueueProtocol?;
-    func queue(by key: String, create ifEmpty: Bool) -> QueueProtocol
+    func queue(by key: String, create ifEmpty: Bool) -> QueueProtocol?
     func registerQueue(key: String, queue: QueueProtocol)
     func pollRecord(_ handler: (Record<Any, Any>) -> (Bool))
 }
@@ -22,13 +22,13 @@ class Topic: TopicProtocol {
         self.key = key
     }
     
-    func queue(by key: String, create ifEmpty: Bool) -> QueueProtocol {
+    func queue(by key: String, create ifEmpty: Bool) -> QueueProtocol? {
         var queue = queue(by: key)
         if ifEmpty && queue == nil {
             queue = Queue()
             queues[key] = queue
         }
-        return queue!
+        return queue
     }
     
     func queue(by key: String ) -> QueueProtocol? {

@@ -8,7 +8,6 @@
 import Foundation
 
 class DMInnerPushConsumer: InAppPushConsumer {
-    var currentTask: InAppPushTask?
     override func shouldExcuteSimultaneously(with task: InAppPushTask) -> Bool {
         return true
     }
@@ -16,11 +15,11 @@ class DMInnerPushConsumer: InAppPushConsumer {
     // 消费成功之后再 commit
     // 如果在自己队列执行
     // 开启超时定时器
-    override func consume(task: InAppPushTask) {
-        if currentTask != nil {
-            // update
-        } else {
-            // show
-        }
-    }
+//    override func consume(task: InAppPushTask) {
+//        if currentTask != nil {
+//            // update
+//        } else {
+//            // show
+//        }
+//    }
 }

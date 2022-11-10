@@ -33,7 +33,8 @@ class Consumer: ConsumerProtocol {
     }
     
     func commit(_ record: Record<Any, Any>) {
-        broker?.topic(by: config)?.commit(record: record)
+        let topic = broker?.topic(by: config)
+        topic?.commit(record: record)
     }
     
     // Publish-Subscribe

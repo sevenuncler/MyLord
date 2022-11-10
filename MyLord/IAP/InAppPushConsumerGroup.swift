@@ -62,9 +62,11 @@ class InAppPushConsumerGroup {
             let key: String = record.key as! String
             let targetConsumer: InAppPushConsumer? = consumers[key]
             if task != nil && targetConsumer != nil && targetConsumer!.shouldHandle(with: task!) {
-                if currentTask == nil || ((currentConsumer?.shouldExcuteSimultaneously(with: task!)) != nil) {
-                    let consumer = consumers[task!.record.key as! String]
-                    consumer?.consume(task: task!)
+                if currentConsumer == nil || currentConsumer!.shouldExcuteSimultaneously(with: task!) {
+                    currentConsumer = targetConsumer
+                    targetConsumer?.consume(task: task!) { [self](success) in
+                        self.currentConsumer = nil
+                    }
                     return true // 5. 可用候选，则中断遍历
                 }
             }

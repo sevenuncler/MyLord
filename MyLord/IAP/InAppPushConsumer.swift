@@ -15,13 +15,23 @@ import Foundation
 // 4. 消息冲突的解决，利用手势冲突的策略
 
 class InAppPushConsumer: Consumer {
-    func consume(task: InAppPushTask) {
-        task.excute()
-        commit(task.record)
+    var currentTask: InAppPushTask?
+    func consume(task: InAppPushTask, completion: @escaping (Bool) -> Void) {
+        currentTask = task
+        task.excute() { [self] (success) in
+            if (success) {
+                self.commit(task.record)
+                self.currentTask = nil
+                completion(success)
+            }
+        }
     }
     
     func shouldHandle(with task: InAppPushTask) -> Bool {
-        return true
+        if currentTask == nil {
+            return true
+        }
+        return false
     }
     
     func shouldExcuteSimultaneously(with task: InAppPushTask) -> Bool {

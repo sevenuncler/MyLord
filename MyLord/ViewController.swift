@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             InnerPushCenter.defaultCenter.registerProducer(producer: producer)
             var index = 0
             timer = Timer(timeInterval: 3, repeats: true) { timer in
-                let record = InnerPushRecord(key: defaultQueue, value: "value\(index)")
+                let record = InnerPushRecord(key: defaultQueue, value: "default\(index)")
                 index += 1
                 producer.send(record)
             }
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             InnerPushCenter.defaultCenter.registerProducer(producer: producer)
             var index = 0
             timer = Timer(timeInterval: 3, repeats: true) { timer in
-                let record = InnerPushRecord(key: queue, value: "value\(index)")
+                let record = InnerPushRecord(key: queue, value: "live\(index)")
                 index += 1
                 producer.send(record)
             }
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         // 消费消息
         let consumerConfig = ConsumerConfig(topic: topic, queue: queue)
-        let consumer = InAppPushConsumer(config: consumerConfig)
+        let consumer = LiveInnerPushConsumer(config: consumerConfig)
         InnerPushCenter.defaultCenter.registerConsumer(key: queue, consumer: consumer)
     }
 }

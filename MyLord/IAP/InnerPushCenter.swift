@@ -53,6 +53,7 @@ class InnerPushCenter {
     }
     
     func registerConsumer(key: String, consumer: InAppPushConsumer) {
+        consumer.broker = broker
         consumerGroup.consumers[key] = consumer
     }
     

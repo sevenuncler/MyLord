@@ -23,7 +23,7 @@ class Queue: QueueProtocol {
     }
     
     func dequeue() -> Record<Any, Any>? {
-        let record = records.popLast()
+        let record = records.last
         return record
     }
     

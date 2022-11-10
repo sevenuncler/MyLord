@@ -29,7 +29,8 @@ class Broker: BrokerProtocol {
     }
     
     func topic(by config: Config) -> TopicProtocol? {
-        return topics[config.topic]
+        let topic = topics[config.topic]
+        return topic
     }
     
     func topic(key: String) -> TopicProtocol? {

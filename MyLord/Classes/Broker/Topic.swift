@@ -51,7 +51,7 @@ class Topic: TopicProtocol {
     }
     
     func pollRecord(_ handler: (Record<Any, Any>) -> (Bool)) {
-        for queue in queues.values {
+        for queue in queues.values.shuffled() {
             let record = queue.dequeue()
             if record != nil &&  handler(record!) {
                 break;

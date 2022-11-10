@@ -21,6 +21,13 @@ class InAppPushTask {
         print("default:\(record.value)")
     }
     
+    func excute(_  completion: @escaping (Bool) -> Void) {
+        print("\(record.value)")
+        DispatchQueue.main.asyncAfter(deadline: .now()+5, execute: {
+            completion(true)
+        })
+    }
+    
     func cancel() {
         
     }

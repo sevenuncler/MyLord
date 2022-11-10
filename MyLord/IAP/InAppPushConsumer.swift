@@ -17,6 +17,7 @@ import Foundation
 class InAppPushConsumer: Consumer {
     func consume(task: InAppPushTask) {
         task.excute()
+        commit(task.record)
     }
     
     func shouldHandle(with task: InAppPushTask) -> Bool {
@@ -24,6 +25,6 @@ class InAppPushConsumer: Consumer {
     }
     
     func shouldExcuteSimultaneously(with task: InAppPushTask) -> Bool {
-        return true
+        return false
     }
 }

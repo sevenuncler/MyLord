@@ -18,12 +18,13 @@ class InnerPushCenter {
     // 6. 等待 Producer 生产消息
     
     static let defaultCenter = InnerPushCenter()
+    let broker = Broker.sharedInstance
     lazy var topic: Topic = {
         return Topic(key: InnerPushTopic)
     }()
     
     lazy var consumerGroup: InAppPushConsumerGroup = {
-        return InAppPushConsumerGroup()
+        return InAppPushConsumerGroup(broker: broker, topic: InnerPushTopic)
     }()
     
     init() {
@@ -35,12 +36,20 @@ class InnerPushCenter {
         consumerGroup.startLoop()
     }
     
+    func start() {
+        consumerGroup.startLoop()
+    }
+    
+    func stop() {
+        consumerGroup.stopLoop()
+    }
+    
     // 自定义注册能力
     // 自定义Topic-queue、Broker-生产者、Broker-消费者、拦截器、消费者-task
     //
     
     func registerProducer(producer: InnerPushProducer) {
-        producer.updateBroker(broker: Broker.sharedInstance)
+        producer.updateBroker(broker: broker)
     }
     
     func registerConsumer(key: String, consumer: InAppPushConsumer) {

@@ -9,7 +9,7 @@ import Foundation
 
 protocol ConsumerProtocol {
     func nextRecord() -> Record<String, Any>?
-    func commit(_ record: Record<String, Any>)
+    func commit(_ record: Record<Any, Any>)
 }
 
 /**
@@ -17,7 +17,8 @@ protocol ConsumerProtocol {
  */
 class Consumer: ConsumerProtocol {
     let config: ConsumerConfig
-    
+    var broker: BrokerProtocol?
+
     init(config: ConsumerConfig) {
         self.config = config
     }
@@ -31,8 +32,8 @@ class Consumer: ConsumerProtocol {
         return []
     }
     
-    func commit(_ record: Record<String, Any>) {
-        
+    func commit(_ record: Record<Any, Any>) {
+        broker?.topic(by: config)?.commit(record: record)
     }
     
     // Publish-Subscribe

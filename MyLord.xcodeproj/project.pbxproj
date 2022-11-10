@@ -13,6 +13,7 @@
 		2B67109A2910A92700043586 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6710992910A92700043586 /* Topic.swift */; };
 		2B67109D2910AFA200043586 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67109C2910AFA200043586 /* Config.swift */; };
 		2B67109F2910B21600043586 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67109E2910B21600043586 /* Record.swift */; };
+		2B6E23B8291C9464001A1AB6 /* LiveInnerPushTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E23B7291C9464001A1AB6 /* LiveInnerPushTask.swift */; };
 		2B8387D62909801200B88A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387D52909801200B88A53 /* AppDelegate.swift */; };
 		2B8387D82909801200B88A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387D72909801200B88A53 /* SceneDelegate.swift */; };
 		2B8387DA2909801200B88A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8387D92909801200B88A53 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		2B6710992910A92700043586 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		2B67109C2910AFA200043586 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2B67109E2910B21600043586 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		2B6E23B7291C9464001A1AB6 /* LiveInnerPushTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveInnerPushTask.swift; sourceTree = "<group>"; };
 		2B8387D22909801200B88A53 /* MyLord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8387D52909801200B88A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8387D72909801200B88A53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				2BC4D1A82915637A00252FD1 /* InnerPushProducer.swift */,
 				2BC4D1AA291564B700252FD1 /* InnerPushRecord.swift */,
 				2BC4D1AC291655B800252FD1 /* InnerPushDefines.swift */,
+				2B6E23B7291C9464001A1AB6 /* LiveInnerPushTask.swift */,
 			);
 			path = IAP;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				2B8387D62909801200B88A53 /* AppDelegate.swift in Sources */,
 				2B6710982910A8EA00043586 /* Queue.swift in Sources */,
 				2B8387D82909801200B88A53 /* SceneDelegate.swift in Sources */,
+				2B6E23B8291C9464001A1AB6 /* LiveInnerPushTask.swift in Sources */,
 				2BC4D1A4291558F800252FD1 /* DMInnerPushConsumer.swift in Sources */,
 				2BC4D1A92915637A00252FD1 /* InnerPushProducer.swift in Sources */,
 			);

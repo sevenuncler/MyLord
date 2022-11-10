@@ -7,7 +7,11 @@
 
 import Foundation
 
-class Record<K, V> {
+class Record<K, V> : Equatable{
+    static func == (lhs: Record<K, V>, rhs: Record<K, V>) -> Bool {
+        return lhs === rhs
+    }
+    
     let key: K
     let value: V
     var timestamp: Float?

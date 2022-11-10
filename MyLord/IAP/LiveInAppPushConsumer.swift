@@ -8,5 +8,7 @@
 import Foundation
 
 class LiveInnerPushConsumer: InAppPushConsumer {
-    
+    override func shouldExcuteSimultaneously(with task: InAppPushTask) -> Bool {
+        return true
+    }
 }

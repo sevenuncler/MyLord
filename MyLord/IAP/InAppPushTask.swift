@@ -8,17 +8,17 @@
 import Foundation
 
 class InAppPushTask {
-    let record: Record<String, Any>
+    let record: Record<Any, Any>
     let timeout: Int = 60 // seconds
     let key: String
     
-    init(record: Record<String, Any>) {
+    init(record: Record<Any, Any>) {
         self.record = record
-        self.key = record.key
+        self.key = record.key as! String
     }
     
     func excute() {
-        
+        print("default:\(record.value)")
     }
     
     func cancel() {

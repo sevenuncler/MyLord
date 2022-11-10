@@ -28,7 +28,11 @@ class Queue: QueueProtocol {
     }
     
     func delete(record: Record<Any, Any>) -> Bool {
-        return false
+        let index = records.firstIndex(of: record)
+        records.removeAll { (r) in
+            return r === record
+        }
+        return true
     }
     
     func clear() {
